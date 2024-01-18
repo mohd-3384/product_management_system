@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #222;
+    color: white;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+/* Small */
+@media (max-width: 767px) {
+    .container {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+::selection {
+    background-color: #2d9999;
+}
+
+button {
+    height: 40px;
+    padding: 8px;
+    margin: 8px 0;
+    background-color: #2d9999;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2d99995b;
+    letter-spacing: .8px;
+    filter: brightness(1.5);
+}
+
+/* Start Head */
+.head {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 50px 0;
+}
+
+.head h2 {
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    padding: 15px;
+}
+
+.head p {
+    font-size: 40px;
+    color: #2d9999;
+}
+
+.head p::selection {
+    color: white;
+}
+
+.head hr {
+    border: 1px solid #ddd;
+    margin-top: 16px;
+}
+
+@media (max-width: 991px) {
+    .head h2 {
+        font-size: 36px;
+    }
+
+    .head p {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 635px) {
+    .head h2 {
+        font-size: 30px;
+    }
+
+    .head p {
+        font-size: 20px;
+    }
+}
+
+/* End Head */
+
+
+
+/* Start Inputs */
+input {
+    background-color: #111;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin: 5px 0;
+    transition: .3s;
+    caret-color: #2d9999;
+}
+
+input:focus:not(#taxes) {
+    background-color: black;
+    box-shadow: 0 0 5px #eee;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+}
+
+
+.total small {
+    background-color: #ff0000cc;
+    width: 100%;
+    height: 34px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 18px;
+    padding-left: 8px;
+    line-height: 1.8;
+}
+
+.total #total::before {
+    content: "Total: ";
+}
+
+.inputs p small {
+    color: #2d9999;
+}
+
+.inputs p small::selection {
+    color: white;
+    background-color: #2d9999;
+}
+
+.inputs #btn {
+    width: 100%;
+}
+
+@media (max-width: 635px) {
+    .head p {
+        font-size: 20px;
+    }
+
+    .inputs .total {
+        flex-flow: column wrap;
+    }
+
+    .inputs small {
+        width: 60%;
+        margin: 5px auto;
+    }
+}
+
+/* End Inputs */
+
+
+
+/* Start Outputs */
+.outputs .searchBy {
+    display: flex;
+    justify-content: space-between;
+}
+
+.outputs .searchBy button {
+    width: 45%;
+}
+
+.outputs #delAll button {
+    width: 100%;
+}
+
+.outputs #delAll button:hover {
+    background-color: #ff0000cc;
+}
+
+.outputs table {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.outputs table th {
+    text-transform: uppercase;
+}
+
+.outputs table th,
+.outputs table td {
+    padding: 5px;
+}
+
+.outputs td button:hover {
+    letter-spacing: 0;
+    transform: scale(1.1);
+}
+
+.outputs td #delete:hover {
+    background-color: #ff0000cc;
+}
+
+@media (max-width: 440px) {
+    .outputs .searchBy {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .outputs .searchBy button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .outputs table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* End Outputs */
